@@ -25,42 +25,42 @@ public class SampleController {
 		return sampleservice.productdetails();
 	}  
 	
-	@PostMapping("/posting") 
-	public HashMap<String, Integer> injectingdata(@RequestBody Products product) {
-		HashMap<String, Integer> hm = new HashMap<String,Integer> ();
-		int data = sampleservice.injectData(product);  
-		if(data==0) {
+	// @PostMapping("/posting") 
+	// public HashMap<String, Integer> injectingdata(@RequestBody Products product) {
+	// 	HashMap<String, Integer> hm = new HashMap<String,Integer> ();
+	// 	int data = sampleservice.injectData(product);  
+	// 	if(data==0) {
 			
-			  hm.put("failed", 0);
-		}
-		else {
-			  hm.put("success", 1);
-		} 
+	// 		  hm.put("failed", 0);
+	// 	}
+	// 	else {
+	// 		  hm.put("success", 1);
+	// 	} 
 		
-		return hm ;
-	}
+	// 	return hm ;
+	// }
 	
-	@PostMapping("/updating")
-	public HashMap<String,Integer> updatingdata(@RequestBody Products product){
-		HashMap<String, Integer> hm = new HashMap<String,Integer> (); 
+	// @PostMapping("/updating")
+	// public HashMap<String,Integer> updatingdata(@RequestBody Products product){
+	// 	HashMap<String, Integer> hm = new HashMap<String,Integer> (); 
 		
-		int data = sampleservice.updatingData(product);
-		if(data==0) {
+	// 	int data = sampleservice.updatingData(product);
+	// 	if(data==0) {
 			
-			  hm.put("failed", 0);
-		}
-		else {
-			  hm.put("success", 1);
-		} 
+	// 		  hm.put("failed", 0);
+	// 	}
+	// 	else {
+	// 		  hm.put("success", 1);
+	// 	} 
 		
-		return hm;
-	}
+	// 	return hm;
+	// }
 	
-	@GetMapping("/data/{name}")
-	public List<Map<String,Object>> paramData(@PathVariable String name){
+	// @GetMapping("/data/{name}")
+	// public List<Map<String,Object>> paramData(@PathVariable String name){
 	
-		return sampleservice.pathData( name);
-	}
+	// 	return sampleservice.pathData( name);
+	// }
 }  
 
 
